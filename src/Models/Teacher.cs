@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HWSomeClasses.src.Models
+﻿namespace HWSomeClasses.src.Models
 {
-    internal class Teacher
+    internal class Teacher : Person
     {
-        public FullName? Name { get; set; }
+        public Teacher(List<EducationalProgram>? specialties, string? name, string? surname, string? lastname)
+            : base(name,surname,lastname)
+        {
+            Specialties = specialties;
+        }
+
         public List<EducationalProgram>? Specialties { get; set; }
     }
 }
